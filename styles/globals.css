@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --footer-icon-size: 3rem;
+  --color-brand: #1d8f8a;
+}
+html,
+booy {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+}
+.footer-wave {
+  animation-name: wave-show;
+  animation-duration: 1s;
+}
+
+@keyframes wave-show {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.link {
+  border-bottom: 4px solid var(--color-brand);
+  /* box-shadow: 0 5px 0 3px var(--color-brand); */
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: #222;
+}
