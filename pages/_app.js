@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
             <a href="#schedule" className="link">
               Class Schedule
             </a>
-            <a href="" className="link">
+            <a href="/about" className="link">
               About Us
             </a>
           </div>
@@ -125,7 +125,7 @@ function MyApp({ Component, pageProps }) {
           </a>
 
           <div className="absolute" style={{ bottom: -170, right: -40 }}>
-            <img src="/madhvi.png/" width="600" className="madhvi-img" />
+            <img src="/madhvi.png/" width="540" className="madhvi-img" />
           </div>
         </footer>
       </div>
