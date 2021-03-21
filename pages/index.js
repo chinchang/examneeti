@@ -13,7 +13,7 @@ export default function Home() {
         <h2 className="text-7xl mb-7">Let's Learn English</h2>
         <p className="text-4xl leading-normal mb-10">
           An online institute to learn English for Bank / SSC / CAT / DSSSB /
-          UPSC / LIC / INSURANCE / CTET / DEFENCE / DRDO and State PSC
+          UPSC / LIC / INSURANCE / CTET / DEFENCE / CLAT and State PSC
           examinations.
         </p>
 
