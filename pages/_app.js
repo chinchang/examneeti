@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
       <div className="flex flex-col items-center justify-center min-h-screen overflow-hidden">
         <header className="w-full flex justify-between items-center max-w-6xl mb-8">
           <h1 className="text-6xl font-bold p-4" aria-label="ExamNeeti">
-            <a className="text-brand" href="https://nextjs.org">
+            <a className="text-brand" href="/">
               <img src="/logo.png" className="h-12" />
             </a>
           </h1>
