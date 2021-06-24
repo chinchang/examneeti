@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.6.0/hint.min.css"
         integrity="sha512-QOEm1kj/MLYTXR/tmHsaYTHCB5yabHN3mil5hUEpPGdLIx7u4u22sQeBm0JDBZqPiKL11iXyjfzKI1ImS/Z8Ig=="
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       />
 
       <div className="flex flex-col items-center justify-center min-h-screen overflow-hidden">
@@ -26,6 +26,9 @@ function MyApp({ Component, pageProps }) {
           <div className="p-4 flex gap-10">
             <a href="#schedule" className="link">
               Class Schedule
+            </a>
+            <a href="/subscribe" className="link">
+              Subscribe
             </a>
             <a href="/about" className="link">
               About Us
@@ -42,14 +45,17 @@ function MyApp({ Component, pageProps }) {
         >
           <path
             fill="#1D8F8A"
-            fill-opacity="1"
+            fillOpacity="1"
             d="M0,160L24,186.7C48,213,96,267,144,272C192,277,240,235,288,197.3C336,160,384,128,432,112C480,96,528,96,576,117.3C624,139,672,181,720,197.3C768,213,816,203,864,176C912,149,960,107,1008,106.7C1056,107,1104,149,1152,165.3C1200,181,1248,171,1296,144C1344,117,1392,75,1416,53.3L1440,32L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"
           ></path>
         </svg>
 
         <footer
           className="flex items-center justify-center w-full h-24 gap-10 text-white relative"
-          style={{ backgroundColor: "#1D8F8A" }}
+          style={{
+            background:
+              "#1D8F8A linear-gradient(0deg, rgba(0 0 0 / 70%), transparent)",
+          }}
         >
           <a
             href="https://youtube.com/examneeti"
