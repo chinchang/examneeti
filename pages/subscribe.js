@@ -1,10 +1,18 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../components/Button";
 import { Card } from "../components/Card";
 
 export default function Subscribe() {
-  const [buttonLabel, setButtonLabel] = useState("Subscribe Now");
+  const [buttonLabel, setButtonLabel] = useState(() => {
+    if (typeof Notification !== "undefined") {
+      if (Notification.permission === "granted")
+        return "You are already subscribed";
+    }
+    return "Subscribe Now";
+  });
+
+  const intervalRef = useRef();
 
   const subscribe = () => {
     window.pushowl.trigger("getCurrentPermission").then((permission) => {
@@ -12,10 +20,24 @@ export default function Subscribe() {
       window.pushowl
         .trigger("showWidget", { type: "browserPrompt" })
         .then(() => {
-          setButtonLabel("yay! Subscribed");
+          // Now keep checking after some seconds if user subscribed
+          intervalRef.current = setInterval(() => {
+            if (Notification.permission === "granted") {
+              setButtonLabel("Yay! You are now subscribed!");
+            }
+          }, 1300);
         });
     });
   };
+
+  useEffect(() => {
+    // when this component unmount we want to clear the interval
+    return () => {
+      if (intervalRef) {
+        clearInterval(intervalRef);
+      }
+    };
+  });
 
   return (
     <>
