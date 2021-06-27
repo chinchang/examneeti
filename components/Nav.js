@@ -13,8 +13,6 @@ const Nav = () => {
     return true;
   });
 
-  console.log(99, isMobile && !isOpen);
-
   useEffect(() => {
     function onClick(e) {
       if (navRef.current && navRef.current.contains(e.target)) {

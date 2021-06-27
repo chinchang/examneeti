@@ -9,7 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex-1 max-w-6xl w-full">
+      <main className="flex-1 max-w-6xl w-full px-4">
         <h2 className="text-7xl mb-7">Let's Learn English</h2>
         <p className="text-xl leading-normal mb-10">
           An online institute to learn English for Bank / SSC / CAT / DSSSB /
@@ -18,7 +18,7 @@ export default function Home() {
         </p>
 
         <Card heading="Schedule 🗓" anchor="schedule">
-          <img src="/schedule.png" />
+          <img src="/schedule2.jpg" />
         </Card>
       </main>
     </>
