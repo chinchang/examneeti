@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../components/Button";
 import { Card } from "../components/Card";
+import confetti from "canvas-confetti";
 
 export default function Subscribe() {
   const [buttonLabel, setButtonLabel] = useState(() => {
@@ -24,6 +25,9 @@ export default function Subscribe() {
           intervalRef.current = setInterval(() => {
             if (Notification.permission === "granted") {
               setButtonLabel("Yay! You are now subscribed!");
+              confetti();
+              setTimeout(confetti, 1000);
+              clearInterval(intervalRef.current);
             }
           }, 1300);
         });
@@ -83,11 +87,21 @@ export default function Subscribe() {
             backgroundPosition: "right bottom",
           }}
         >
-          <p className="mb-3 text-2xl text-gray-800">
+          <p className="mb-8 text-2xl text-gray-800">
             Roz apne mobile pe payen English seekhne k badhiya tareeke!
           </p>
-          <p>Vocabulary badhao - Get daily notification about new words.</p>
-          <p>Grammar seekho - Get daily notification on grammar tips.</p>
+          <p className="mb-1">
+            <strong>😲 Vocabulary badhao</strong> - Get daily notification about
+            new words.
+          </p>
+          <p className="mb-1">
+            <strong>🗒 Grammar seekho</strong> - Get daily notification on
+            grammar tips.
+          </p>
+          <p className="mb-1">
+            <strong>🔔 Class notifications</strong> - Get notifications about
+            ExamNeeti classes
+          </p>
 
           <div className="mt-8 text-center">
             <Button onClick={subscribe}>{buttonLabel}</Button>
