@@ -43,15 +43,18 @@ export default function Subscribe() {
         <script src="https://cdn.pushowl.com/sdks/pushowl-sdk.js?subdomain=examneeti&environment=production&shop=examneeti.myshopify.com"></script>
       </Head>
 
-      <main className="flex-1 max-w-6xl w-full">
+      <main className="flex-1 max-w-6xl w-full px-4">
         <h2 className="text-7xl mb-7">Let's Learn English</h2>
-        <p className="text-4xl leading-normal mb-10">
+        <p className="text-2xl leading-normal mb-10">
           An online institute to learn English for Bank / SSC / CAT / DSSSB /
           UPSC / LIC / INSURANCE / CTET / DEFENCE / CLAT and State PSC
           examinations.
         </p>
 
-        <Card heading="Subscribe 🗒" anchor="subscribe">
+        <Card heading="Subscribe to learn English Daily🗒" anchor="subscribe">
+          <p className="mb-3 text-2xl text-gray-800">
+            Roz apne mobile pe payen English seekhne k badhiya tareeke!
+          </p>
           <p>Vocabulary badhao - Get daily notification about new words.</p>
           <p>Grammar seekho - Get daily notification on grammar tips.</p>
 

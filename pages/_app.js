@@ -1,3 +1,6 @@
+import dynamic from "next/dynamic";
+
+const Nav = dynamic(() => import("../components/Nav"), { ssr: false });
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -16,24 +19,14 @@ function MyApp({ Component, pageProps }) {
       />
 
       <div className="flex flex-col items-center justify-center min-h-screen overflow-hidden">
-        <header className="w-full flex justify-between items-center max-w-6xl mb-8">
-          <h1 className="text-6xl font-bold p-4" aria-label="ExamNeeti">
+        <header className="w-full flex justify-between items-center max-w-6xl mb-8 p-4">
+          <h1 className="text-6xl font-bold" aria-label="ExamNeeti">
             <a className="text-brand" href="/">
               <img src="/logo.png" className="h-12" />
             </a>
           </h1>
 
-          <div className="p-4 flex gap-10">
-            <a href="#schedule" className="link">
-              Class Schedule
-            </a>
-            <a href="/subscribe" className="link">
-              Subscribe
-            </a>
-            <a href="/about" className="link">
-              About Us
-            </a>
-          </div>
+          <Nav />
         </header>
 
         <Component {...pageProps} />
