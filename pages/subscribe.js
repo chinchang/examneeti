@@ -51,7 +51,16 @@ export default function Subscribe() {
           examinations.
         </p>
 
-        <Card heading="Subscribe to learn English Daily🗒" anchor="subscribe">
+        <Card
+          heading="Subscribe to learn English Daily🗒"
+          anchor="subscribe"
+          style={{
+            background: "url(mob.png)",
+            backgroundSize: "25%",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "right bottom",
+          }}
+        >
           <p className="mb-3 text-2xl text-gray-800">
             Roz apne mobile pe payen English seekhne k badhiya tareeke!
           </p>

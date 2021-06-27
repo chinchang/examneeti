@@ -18,7 +18,7 @@ export default function Home() {
         </p>
 
         <Card heading="Schedule 🗓" anchor="schedule">
-          <img src="/schedule2.jpg" />
+          <img src="/schedule2.jpeg" />
         </Card>
       </main>
     </>
