@@ -46,8 +46,24 @@ export default function Subscribe() {
   return (
     <>
       <Head>
-        <title>ExamNeeti - Sahi neeti, sahi disha</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>
+          ExamNeeti - Easy to read notifications for learning English
+        </title>
+        <meta name="description" content="English aayegi ab apke phone pe!" />
+        <meta
+          name="og:title"
+          content="ExamNeeti - Easy to read notifications for learning English"
+        />
+        <meta
+          property="og:description"
+          content="English aayegi ab apke phone pe!"
+        />
+        <meta
+          property="og:image"
+          content="https://examneeti.com/subscribe-social.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="/logo-square.png" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
